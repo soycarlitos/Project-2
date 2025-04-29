@@ -3,73 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pretty Website</title>
+  <title>My Portfolio</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #ece9e6, #ffffff);
-      color: #333;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: #f9f9f9; color: #333; }
+    header { background: #1e1e2f; color: white; padding: 2rem 1rem; text-align: center; }
+    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.2rem; color: #ccc; }
 
-    header {
-      background-color: #4e54c8;
-      color: white;
-      padding: 2rem;
+    nav {
+      background: #111;
+      padding: 1rem;
       text-align: center;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ffcc00;
     }
 
-    main {
-      padding: 3rem;
-      text-align: center;
+    section { padding: 4rem 2rem; max-width: 1000px; margin: auto; }
+    .about, .projects, .contact {
+      margin-bottom: 3rem;
     }
-
-    .card {
+    .projects .card {
       background: white;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-      border-radius: 12px;
-      padding: 2rem;
-      max-width: 500px;
-      margin: 2rem auto;
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: scale(1.03);
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
     footer {
-      background-color: #4e54c8;
-      color: white;
       text-align: center;
-      padding: 1rem;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      background: #1e1e2f;
+      color: white;
+      padding: 2rem 1rem;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Welcome to Carlitos Website</h1>
+    <h1>Carlitos Rodriguez</h1>
+    <p>Developer | Designer | Creator</p>
   </header>
 
-  <main>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm a DBU student from colombia :) </p>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
     <div class="card">
-      <h2>Hello class</h2>
-      <p>This is my final project :) </p>
+      <h3>Smart Farming Dashboard</h3>
+      <p>Built a live dashboard using 5G and Wi-Fi for farmers to monitor crops and control irrigation remotely via a Raspberry Pi and mobile app.</p>
     </div>
-  </main>
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Deployed a personal website on Microsoft Azure using HTML, CSS, and GitHub integration via Static Web Apps.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email me at <a href="carlosr.dbu@edu">carlosr@dbu.edu /a></p>
+  </section>
 
   <footer>
-    &copy; 2025 Carlitos Co.
+    <p>&copy; 2025 Carlitos. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
